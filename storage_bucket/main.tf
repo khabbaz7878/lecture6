@@ -1,13 +1,15 @@
+variable "bucket_name_suffix" {
+  description = "Suffix for the storage bucket name"
+}
+
+variable "location" {
+  description = "Location for the storage bucket"
+  default     = "US"
+}
 
 resource "google_storage_bucket" "bucket" {
-  name     = var.bucket_name
+  name     = "my-bucket-${var.bucket_name_suffix}"
   location = var.location
-module storage_bucket {
-  source       = "./storage_bucket"
-  project_id   = "speedy-toolbox-360600"
-  region       = "us-central1"
-  bucket_names = ["bucket1", "bucket2", "bucket3", "bucket4", "bucket5"]
-}
 
   # Add other bucket configurations as needed
 }
