@@ -1,6 +1,3 @@
-variable "bucket_name" {
-  description = "Name for the storage bucket"
-}
 
 resource "google_storage_bucket" "bucket" {
   name     = var.bucket_name
