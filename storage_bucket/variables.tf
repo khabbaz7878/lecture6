@@ -1,8 +1,18 @@
-variable "bucket_name_suffix" {
-  description = "Suffix for the storage bucket name"
+# storage_bucket/variables.tf
+
+# Bucket name
+variable "bucket_name" {
+  type = string
 }
 
+# Bucket location 
 variable "location" {
-  description = "Location for the storage bucket"
-  default     = "US"
+  type    = string
+  default = "US"
+}
+
+# Storage class
+variable "storage_class" {
+  type    = string
+  default = "STANDARD" 
 }
