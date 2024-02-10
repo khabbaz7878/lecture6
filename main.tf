@@ -1,6 +1,6 @@
 # Configure provider 
 provider "google" {
-  project = "<PROJECT ID>"
+  project = "speedy-toolbox-360600"
   region  = "us-central1" 
 }
 
