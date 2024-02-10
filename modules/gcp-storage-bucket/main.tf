@@ -1,6 +1,9 @@
+# Define the Google Cloud provider
 provider "google" {
-  version = "~> 3.0"
+  project = var.project_id
+  region  = var.region
 }
+
 
 variable "name" {
   type        = string
