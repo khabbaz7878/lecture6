@@ -1,11 +1,9 @@
-terraform {
-  required_providers {
-google = {
-source  = "hashicorp/google"
-version = "~> 3.0"
+# Define the Google Cloud provider
+provider "google" {
+  project = var.project_id
+  region  = var.region
 }
- }
-}
+
 
 module "storage_bucket_1" {
   source = "./modules/gcp-storage-bucket"
