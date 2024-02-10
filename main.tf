@@ -4,7 +4,7 @@ provider "google" {
 }
 
 module "gcs_buckets" {
-  source = "modules/simple_bucket"
+  source = "lecture6/modules/simple_bucket"
   version = "~> 3.0"
 
   for_each = toset(["bucket-1", "bucket-2", "bucket-3", "bucket-4", "bucket-5"])
@@ -26,7 +26,7 @@ provider "google" {
 
 # Create 5 bucket modules
 module "bucket" {
-  source  = "modules/simple_bucket"
+  source  = "lecture6/modules/simple_bucket"
   version = "~> 1.7"
 
   for_each = toset(["1", "2", "3", "4", "5"])
