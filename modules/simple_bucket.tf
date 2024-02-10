@@ -1,5 +1,5 @@
 module "bucket" {
-  source  = "modules/simple_bucket.tf"
+  source  = "lecture6/modules/simple_bucket.tf"
   version = "~> 1.7"
 
   for_each = toset(["1", "2", "3", "4", "5"])
