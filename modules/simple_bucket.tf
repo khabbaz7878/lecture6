@@ -5,7 +5,7 @@ module "bucket" {
   for_each = toset(["1", "2", "3", "4", "5"])
 
   name          = "my-bucket-${each.key}"
-  project_id    = "<PROJECT ID>"
+  project_id    = "<speedy-toolbox-360600>"
   location      = "US"
   storage_class = "STANDARD"
   force_destroy = true
