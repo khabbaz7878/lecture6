@@ -1,5 +1,10 @@
-provider "google" {
-  version = "~> 0.13"
+terraform {
+  required_providers {
+google = {
+source  = "hashicorp/google"
+version = "~> 3.0"
+}
+ }
 }
 
 module "storage_bucket_1" {
