@@ -1,5 +1,5 @@
 provider "google" {
-  version = "~> 2.0"
+  version = "~> 0.13"
 }
 
 module "storage_bucket_1" {
