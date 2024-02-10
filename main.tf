@@ -1,11 +1,12 @@
-module "storage_buckets" {
-  source = "./storage_bucket"
-
-  for_each    = toset(["1", "2", "3", "4", "5"])
-  bucket_name = "my-bucket-${each.key}"
+# Define the Google Cloud provider
+provider "google" {
+  project = var.project_id
+  region  = var.region
 }
 
-
-output "bucket_names" {
-  value = [for bucket_key, bucket in module.storage_buckets : bucket.name]
+# Create the Google Cloud Storage buckets
+resource "google_storage_bucket" "buckets" {
+  count       = length(var.bucket_names)
+  name        = var.bucket_names[count.index]
+  location    = var.region
 }
