@@ -1,5 +1,5 @@
 provider "google" {
-  project = "<your-project-id>"
+  project = "<speedy-toolbox-360600>"
   region  = "us-central1"
 }
 
