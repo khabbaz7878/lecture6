@@ -1,5 +1,5 @@
-module "storage_buckets" {
+module "bucket" {
   source = "./storage_bucket"
 
-  bucket_name_suffix = ["1", "2", "3", "4", "5"]
+  bucket_name = "my-bucket"
 }
