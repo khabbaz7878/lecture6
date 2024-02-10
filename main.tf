@@ -1,11 +1,33 @@
-# Configure provider 
 provider "google" {
-  project = "speedy-toolbox-360600"
-  region  = "us-central1" 
+  version = "~> 3.0"
 }
 
-module "buckets" {
-  source = "./modules/gcp-bucket"
-  
-  bucket_names = ["1", "2", "3", "4", "5"]
+module "storage_bucket_1" {
+  source = "./modules/gcp-storage-bucket"
+
+  name = "my-bucket-1"
+}
+
+module "storage_bucket_2" {
+  source = "./modules/gcp-storage-bucket"
+
+  name = "my-bucket-2"
+}
+
+module "storage_bucket_3" {
+  source = "./modules/gcp-storage-bucket"
+
+  name = "my-bucket-3"
+}
+
+module "storage_bucket_4" {
+  source = "./modules/gcp-storage-bucket"
+
+  name = "my-bucket-4"
+}
+
+module "storage_bucket_5" {
+  source = "./modules/gcp-storage-bucket"
+
+  name = "my-bucket-5"
 }
