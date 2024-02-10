@@ -1,10 +1,8 @@
-variable "bucket_name" {
-  description = "Name for the storage bucket"
+variable "bucket_name_suffix" {
+  description = "Suffix for the storage bucket name"
 }
-variable "project_id" {
-  description = "The ID of the Google Cloud project"
-  }
 
-variable "region" {
-  description = "The region to create the buckets in"
-  }
+variable "location" {
+  description = "Location for the storage bucket"
+  default     = "US"
+}
