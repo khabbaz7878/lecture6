@@ -1,8 +1,13 @@
+# storage_bucket/main.tf
 
-
+# Define bucket resource
 resource "google_storage_bucket" "bucket" {
-  name     = "my-bucket-${var.bucket_name_suffix}"
-  location = var.location
-
-  # Add other bucket configurations as needed
+  name          = var.bucket_name
+  location      = var.location
+  storage_class = var.storage_class
+  force_destroy = true
 }
+
+
+
+
