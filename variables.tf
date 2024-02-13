@@ -10,3 +10,7 @@ variable "bucket_names" {
   description = "List of bucket names"
   type        = list(string)
 }
+variable "google_credentials" {
+  type        = string
+  description = "The contents of the Google service account JSON file"
+}
