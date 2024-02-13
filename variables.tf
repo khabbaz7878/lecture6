@@ -5,3 +5,8 @@ variable "project_id" {
 variable "region" {
   description = "The region to create the buckets in"
   }
+
+variable "bucket_names" {
+  description = "List of bucket names"
+  type        = list(string)
+}
